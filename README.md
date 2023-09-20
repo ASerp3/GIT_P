@@ -5,6 +5,8 @@
 
 Коммандную строку ты знаешь - в гитбаш - те же команды + команды гита - см ниже
 
+### Начальные настройки
+
 Задать глоб параметры локального гита - имя и емайл
 
 ``` bash
@@ -17,6 +19,21 @@ git config --global user.email email
 git config --list		
 cat ~/.gitconfig		
 ```
+
+Создай уд репу на сайте - https://github.com
+
+
+Создать пару ключей публичный и секретный на локальном компе и пропиши публ ключ на сайт гитхаб
+``` bash
+ssh-keygen -t ed25519 -C aserp3@gmail.com		
+ls -a ~/.ssh		
+ssh -T git@github.com		
+```
+
+
+
+
+### Работа с конкретным проектом 
 
 Инициализация в папке
 ``` bash
@@ -44,7 +61,7 @@ git commit -m "Коммент"
 git log		
 ```
 
-Подключить удаленную репу
+Подключить удаленную репу к локальной
 ``` bash
 git remote add origin https://github.com/ASerp3/GIT_P.git		
 ```
@@ -57,13 +74,6 @@ git branch -M master
 Отправить у даленную репу из локальной
 ``` bash
 git push -u origin master		
-```
-
-Создать пару ключей публичный и секретный
-``` bash
-ssh-keygen -t ed25519 -C aserp3@gmail.com		
-ls -a ~/.ssh		
-ssh -T git@github.com		
 ```
 
 См состояние уд.репы
